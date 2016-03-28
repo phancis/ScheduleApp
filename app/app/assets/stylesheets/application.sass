@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+@import 'global_variables'
+
+
+body
+  background-color: $background-color
+
+a
+  color: $primary-color
+  font-weight: bold
+  &:hover
+    color: $highlight-color
