@@ -2,10 +2,16 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title App
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = stylesheet_link_tag 'https://fonts.googleapis.com/icon?family=Material+Icons'
     = csrf_meta_tags
+    %title Spire
+
   %body
-    = yield
+    .header_wrapper
+      .header
+        = render partial: '/layouts/navigation'
+    .content_wrapper
+      .content
+        = yield
